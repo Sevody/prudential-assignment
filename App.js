@@ -35,7 +35,6 @@ export default function App() {
           },
           headerBackTitleVisible: false,
           headerShadowVisible: false,
-          headerBackImageSource: require("./assets/icon/leftArrow.png"),
         }}
       >
         <Stack.Screen
