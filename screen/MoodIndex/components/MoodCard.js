@@ -31,10 +31,10 @@ export default function MoodCard({ data }) {
   const shadowOpt = {
     width: 380,
     height: 62,
-    color: "#FFF",
-    border: 20,
+    color: "#FFFFFF",
+    border: 60,
     radius: 3,
-    opacity: 0.9,
+    opacity: 0.8,
     x: 0,
     y: 0,
   };
@@ -107,6 +107,7 @@ const styles = StyleSheet.create({
     height: 98,
     justifyContent: "center",
     alignItems: "center",
+    zIndex: 10,
   },
   averageScoreText: {
     fontWeight: "800",
