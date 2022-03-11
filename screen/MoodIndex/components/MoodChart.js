@@ -3,7 +3,6 @@ import { StyleSheet, View } from "react-native";
 import PropTypes from "prop-types";
 import AnimatedColumnar from "./AnimatedColumnar";
 
-
 export default function MoodChart({ data }) {
   const [activeIndex, setActiveIndex] = useState();
 
@@ -61,7 +60,7 @@ export default function MoodChart({ data }) {
           active: "#52C873",
         };
       }
-      
+
       result.push({
         score,
         weekday: dayList[i],
@@ -120,6 +119,7 @@ const styles = StyleSheet.create({
     shadowColor: "#FFFFFF",
     shadowOpacity: 1,
     position: "relative",
+    elevation: 15,
   },
   backgroud: {
     height: 148,

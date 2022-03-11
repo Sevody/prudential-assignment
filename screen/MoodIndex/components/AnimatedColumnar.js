@@ -188,8 +188,9 @@ const styles = StyleSheet.create({
       height: 4,
     },
     shadowRadius: 10,
-    shadowColor: "rgba(0, 0, 0, 0.2)",
-    shadowOpacity: 1,
+    shadowColor: "#000000",
+    shadowOpacity: 0.2,
+    elevation: 3,
   },
   columnarBgActive: {
     width: 48,
@@ -226,8 +227,9 @@ const styles = StyleSheet.create({
       height: 4,
     },
     shadowRadius: 10,
-    shadowColor: "rgba(0, 0, 0, 0.2)",
-    shadowOpacity: 1,
+    shadowColor: "#000000",
+    shadowOpacity: 0.2,
+    elevation: 3,
   },
   weekdayToday: {
     backgroundColor: "#2D2F33",

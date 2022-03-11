@@ -1,6 +1,7 @@
 import React, { useMemo, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { Text, Image, StyleSheet, View, Animated } from "react-native";
+import { BoxShadow } from "react-native-shadow";
 
 export default function MoodCard({ data }) {
   const cardOpacity = useRef(new Animated.Value(0)).current;
@@ -26,6 +27,18 @@ export default function MoodCard({ data }) {
     );
   }, [data]);
 
+  // cover the shadow of card
+  const shadowOpt = {
+    width: 380,
+    height: 62,
+    color: "#FFF",
+    border: 20,
+    radius: 3,
+    opacity: 0.9,
+    x: 0,
+    y: 0,
+  };
+
   return (
     <Animated.View
       style={[
@@ -46,7 +59,11 @@ export default function MoodCard({ data }) {
       <View style={styles.averageScore}>
         <Text style={styles.averageScoreText}>{averageScore}</Text>
       </View>
-      <Text style={styles.titleText}>周平均心情指数</Text>
+      <BoxShadow setting={shadowOpt}>
+        <View style={styles.title}>
+          <Text style={styles.titleText}>周平均心情指数</Text>
+        </View>
+      </BoxShadow>
     </Animated.View>
   );
 }
@@ -69,6 +86,7 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     shadowColor: "#000000",
     shadowOpacity: 0.1,
+    elevation: 15,
   },
   userInfo: {
     flexDirection: "row",
@@ -95,6 +113,11 @@ const styles = StyleSheet.create({
     fontSize: 72,
     fontFamily: "Nunito Bold",
     color: "#2D2F33",
+  },
+  title: {
+    width: "100%",
+    alignItems: "center",
+    height: 62,
   },
   titleText: {
     fontFamily: "PingFang HK",
